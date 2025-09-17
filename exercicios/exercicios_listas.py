@@ -60,4 +60,4 @@ for i, aluno in enumerate(notas):
     media = sum(aluno) / len(aluno)
     print(f"Média do aluno {i+1}: {media:.1f}")
 
-#Criando tabuleiro de Xadrez: 
+
