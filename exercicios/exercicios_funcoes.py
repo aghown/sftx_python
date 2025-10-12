@@ -56,3 +56,47 @@ def dados_pessoais(**info):
 
 dados_pessoais(nome="Hanna", idade=23, cidade="Recife")
 
+#8.
+def calculadora():
+    operacao = input("Qual operação deseja fazer? soma, subtração, multiplicação ou divisão? ")
+
+    if operacao == "soma":
+        x = float(input("Digite o rimeiro numero: "))
+        y = float(input("Digite o segundo numero: "))
+        soma = x + y
+        print("Resultado da soma: ",soma)
+
+    elif operacao == "subtração":
+        x = float(input("Primeiro numero: "))
+        y = float(input("Segundo numero: "))
+        sub = x - y
+        print("Resultado da subtração: ",sub)
+
+    elif operacao == "divisão":
+        x = float(input("Primeiro numero: "))
+        y = float(input("Segundo numero: "))
+        div = x / y
+        print("Resultado da divisão: ",div)
+
+    elif operacao == "multiplicação":
+        x = float(input("Primeiro numero: "))
+        y = float(input("Segundo numero: "))
+        mult = x * y
+        print("Resultado da multiplicação: ",mult)
+
+calculadora()
+
+def aplicar_operacao(a, b, operacao):
+    return operacao(a, b)
+
+def soma(a, b):
+    return a + b
+
+def multiplicacao(a, b):
+    return a * b
+
+resultado1 = aplicar_operacao(3, 4, soma)
+print("Soma:", resultado1)
+
+resultado2 = aplicar_operacao(3, 4, multiplicacao)
+print("Multiplicação:", resultado2)

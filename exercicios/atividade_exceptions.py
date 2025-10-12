@@ -1,32 +1,32 @@
-"""#1. 
+#1. 
 try: 
     num = int(input("Digite um número: "))
 
 except:
     print("Apenas números inteiros!")
-"""
+
 #2.
-"""try:
+try:
     num1 = int(input("Digite um número: "))
     num2 = int(input("Digite um segundo número: "))
     mult = num1*num2
 
 except ValueError:
     print("Digite apenas números!")
-"""
+
 #3.
-"""try:
+try:
     num = int(input("Digite um número: "))
 
 except ValueError:
     print("Digite apenas números!")
 
 else:
-    print("o número digitado foi", num)"""
+    print("o número digitado foi", num)
 
 #4.
 
-"""try:
+try:
     f = open("dados.txt")
     try:
         f.write("Lorem Ipsum")
@@ -35,10 +35,10 @@ else:
     finally:
         f.close()
 except:
-    print("Encerrando o programa")"""
+    print("Encerrando o programa")
 
 #5.
-"""def dividir():
+def dividir():
     a = int(input("Digite o primeiro número: "))
     b = int(input("Digite o segundo número: "))
     if b == 0:
@@ -47,9 +47,9 @@ except:
     print(a/b)
 
 dividir()
-"""
+
 #6.
-"""class IdadeInvalidaError(Exception):
+class IdadeInvalidaError(Exception):
     pass
 
 def cadastrar_idade():
@@ -59,10 +59,10 @@ def cadastrar_idade():
     
     print(idade)
 
-cadastrar_idade()"""
+cadastrar_idade()
 
 #7.
-"""try:
+try:
     num1 = int(input("Digite o primeiro número: "))
     num2 = int(input("Digite o segundo número: "))
     div = num1/num2
@@ -71,5 +71,5 @@ except ZeroDivisionError:
     print("O segundo numero deve ser diferente de zero")
 
 except ValueError:
-    print("Só informar números")"""
+    print("Só informar números")
 
