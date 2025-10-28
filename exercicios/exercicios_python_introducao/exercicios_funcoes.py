@@ -86,6 +86,7 @@ def calculadora():
 
 calculadora()
 
+#9.
 def aplicar_operacao(a, b, operacao):
     return operacao(a, b)
 

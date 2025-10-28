@@ -3,7 +3,6 @@
 
 
 
-9. Mostre o ano e a quantidade de turmas apenas para os anos que têm mais de 2 turmas. (Use GROUP BY e HAVING)
 
 10. Exiba o nome dos cursos e suas mensalidades, ordenando primeiro pela mensalidade (decrescente). (Use ORDER BY)
 */
@@ -48,8 +47,23 @@ ORDER BY ano ASC;
 
 -- 7. Liste o ano das turmas e a quantidade de turmas por ano. (Use GROUP BY)
 
-SELECT ano, id_turma, COUNT() AS n_turmas
+SELECT ano, 
+    COUNT(*) AS n_turmas
+FROM Turma
+GROUP BY ano;
+
+-- 8. Calcule a média da nota1 dos alunos por turma_id. (Use GROUP BY com função de agregação)
+SELECT 
+    nome nome_aluno,
+    nota1,
+    nota2,
+    (nota1+nota2)/2 AS media_notas
 FROM Aluno
 GROUP BY id_turma;
 
--- 8. Calcule a média da nota1 dos alunos por turma_id. (Use GROUP BY com função de agregação)
+-- 9. Mostre o ano e a quantidade de turmas apenas para os anos que têm mais de 2 turmas. (Use GROUP BY e HAVING)
+SELECT ano, 
+    COUNT(*) AS n_turmas
+FROM Turma
+GROUP BY ano
+HAVING COUNT(*) >2;

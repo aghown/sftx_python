@@ -73,3 +73,38 @@ except ZeroDivisionError:
 except ValueError:
     print("Só informar números")
 
+#8.
+try:
+    numero = int(input("Digite um número inteiro: "))
+except ValueError:
+    print("Erro: Valor invalido. Digite um número inteiro.")
+else:
+    if numero % 2 == 0:
+        print("O número é par.")
+    else:
+        print("O número é ímpar.")
+finally:
+    print("Fim do programa")
+
+#9. 
+class SaldoInsuficienteError(Exception):
+    def __init__(self, mensagem="Salndo insuficientr par realizar o saque."):
+        super().__init__(mensagem)
+
+def sacar(saldo, valor):
+    if valor > saldo:
+        raise SaldoInsuficienteError 
+    return saldo - valor
+    
+try:
+    saldo_atual = float(input("Digite seu saldo atual: "))
+    valor_saque = float(input("Digit o valor que deseja sacar: "))
+    novo_saldo = sacar(saldo_atual, valor_saque)
+except SaldoInsuficienteError as e:
+     print(f"Erro: {e}")
+except ValueError:
+    print("Erro: Digite valores numéricos válidos.")
+else:
+    print("Saque realizado")
+finally:
+    print("Fim do programa") 
